@@ -1,7 +1,7 @@
 package com.example.jpa.basic;
 
-import com.example.jpa.shop.domain.Member;
-import com.example.jpa.shop.domain.Team;
+import com.example.jpa.shop.domain.level1.Member;
+import com.example.jpa.shop.domain.level1.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

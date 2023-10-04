@@ -1,4 +1,4 @@
-package com.example.jpa.shop.domain;
+package com.example.jpa.shop.domain.level1;
 
 import lombok.Getter;
 import lombok.Setter;
