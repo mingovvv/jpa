@@ -2,6 +2,8 @@
 
 -----
 
+[Entity](../src/main/java/com/example/jpa/shop/domain/level1)
+
 ## 엔티티 
 [엔티티 매핑 속성](../src/main/java/com/example/jpa/basic/entity/Member.java)
 
