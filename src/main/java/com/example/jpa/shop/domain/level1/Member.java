@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -18,6 +19,27 @@ public class Member {
 
     @Column(name = "USERNAME")
     private String name;
+
+    // 기간
+//    private LocalDateTime startDate;
+//    private LocalDateTime endDate;
+    @Embedded
+    private Period period;
+
+    // 주소
+//    private String city;
+//    private String street;
+//    private String zipcode;
+    @Embedded
+    private Address homeAddress;
+
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "city", column = @Column(name = "w_city")),
+            @AttributeOverride(name = "street", column = @Column(name = "w_street")),
+            @AttributeOverride(name = "zipcode", column = @Column(name = "w_zipcode"))
+    })
+    private Address workAddress;
 
     /**
      * @ManyToOne
