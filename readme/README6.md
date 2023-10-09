@@ -116,8 +116,9 @@ em.createQuery("select m from Member m order by m.age desc", Member.class)
    - `select count(m) from Member m, Team t where m.username = t.name`
 
 페치조인(fetch join)
+ - 일반조인의 경우 from절 테이블만 영속화 시키는 반면, 페치조인의 경우 명시된 모든 테이블 영속화시킴 
  - jpal에서 성능 최적화를 위해 제공해주는 기능
- - 연간된 엔티티나 컬렉션을 sql 한 번에 함께 조회하는 기능
+ - 연관된 엔티티나 컬렉션을 sql 한 번에 함께 조회하는 기능
  - `join fetch` 명령어 사용
  - `N + 1` 문제 해결(즉시로딩(JPQL 사용 시) / 지연로딩 모두 `N + 1` 문제에서 자유로울 수 없다. fetch join 고려하기)
    ```bigquery

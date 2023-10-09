@@ -1,6 +1,7 @@
 package com.example.jpa.basic;
 
 import com.example.jpa.shop.domain.level1.Member;
+import com.example.jpa.shop.domain.level1.Team;
 import com.example.jpa.shop.domain.level4.Child;
 import com.example.jpa.shop.domain.level4.Parent;
 
@@ -24,7 +25,30 @@ public class TypeMain {
 
         try {
 
-            Member member = new Member();
+            Team team1 = new Team();
+            team1.setName("플랫폼");
+
+            Team team2 = new Team();
+            team2.setName("영업");
+
+            Team team3 = new Team();
+            team3.setName("프론트");
+
+            Member member1 = new Member();
+            member1.setName("a");
+            member1.setTeam(team1);
+            em.persist(member1);
+
+            Member member2 = new Member();
+            member2.setName("b");
+            member2.setTeam(team1);
+            em.persist(member2);
+
+            Member member3 = new Member();
+            member3.setName("c");
+            member3.setTeam(team1);
+            em.persist(member3);
+
 
 
             tx.commit();
